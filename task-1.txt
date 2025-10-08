@@ -1,4 +1,40 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541076
+AD-SOYAD:sabiha nur çay
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+benim seçtiğim görev favori oyununda yükser skor alma algoritması bu ödevi yaparken ChatGPT kullandım.
+Favori oyununda yüksek skor alma algoritması bununla ilgili pseudecode yaz doğal cümleler içersin.
+ChatGPT'nin cevabı
+BAŞLA
+
+Oyunu başlat.
+Oyunun kurallarını ve puanlama sistemini gözden geçir.
+
+Başlangıçta hedef_puan = maksimum_puan olarak belirle.
+Toplam_puan = 0
+
+OYUN_DEVAM_EDERKEN:
+    Eğer engel veya düşman varsa:
+        Kaçın veya doğru zamanda saldır.
+        Gereksiz risk alma.
+    Eğer bonus veya ekstra puan veren nesne varsa:
+        Güvenli bir şekilde topla.
+    
+    Her tur sonunda:
+        Toplam_puanı güncelle.
+        Eğer Toplam_puan > önceki_rekor_puan:
+            Yeni rekoru kaydet.
+            Oyuncuya “Tebrikler! Yeni yüksek skor!” mesajı göster.
+
+    Eğer can hakkı biterse veya oyun sonlanırsa:
+        Oyunu durdur.
+        Son puanı kaydet.
+        Oyuncuya puanı göster.
+
+Eğer hedef_puan ulaşılmadıysa:
+    Hataları analiz et.
+    Hangi aşamalarda puan kaybedildiğini not al.
+    Bir sonraki deneme için stratejiyi güncelle.
+
+BİTİR
+
