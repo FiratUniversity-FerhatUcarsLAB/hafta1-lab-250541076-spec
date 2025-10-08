@@ -3,39 +3,41 @@ AD-SOYAD:sabiha nur çay
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 benim seçtiğim görev telefon rehberini alfabetik düzenleme algoritması bu ödevi yaparken hatGPT kullandım.
-Telefon rehberini alfabetik düzenleme için bana koşul içeren bir algoritma yaz.
+telefon rehberini alfabetik düzenleme algoritması için bana doğal ifadeler kullandığın bir pseudecode yaz.
 ChatGPTnin cevabı
 BAŞLA
 
-Rehberdeki tüm kişi kayıtlarını bir listeye al → REHBER_LISTESİ
+Ekrana "Telefon rehberi sıralama programına hoş geldiniz." yaz.
+
+Rehberdeki kişi isimlerini bir listeye al → REHBER_LISTESİ
 
 Eğer REHBER_LISTESİ boşsa:
-    Ekrana "Rehberde kişi yok." yaz.
+    Ekrana "Rehberde kayıtlı kişi bulunamadı." yaz.
     BİTİR
 
-Aksi halde:
-    N = REHBER_LISTESİ'ndeki kişi sayısı
-    Ekrana "Alfabetik sıralama başlatılıyor..." yaz.
+Ekrana "Rehberde " + kişi_sayısı + " kişi bulundu." yaz.
+Ekrana "Alfabetik sıralama işlemi başlatılıyor..." yaz.
 
-    i = 0
-    TEKRAR i < N - 1 OLDUĞU SÜRECE:
-        j = 0
-        TEKRAR j < N - i - 1 OLDUĞU SÜRECE:
-            Eğer REHBER_LISTESİ[j].isim > REHBER_LISTESİ[j + 1].isim ise:
-                Geçici = REHBER_LISTESİ[j]
-                REHBER_LISTESİ[j] = REHBER_LISTESİ[j + 1]
-                REHBER_LISTESİ[j + 1] = Geçici
-            Aksi halde:
-                Hiçbir işlem yapma.
-            j = j + 1
-        i = i + 1
+i = 0
+TEKRAR i < REHBER_LISTESİ uzunluğu - 1 OLDUĞU SÜRECE:
+    j = 0
+    TEKRAR j < REHBER_LISTESİ uzunluğu - i - 1 OLDUĞU SÜRECE:
+        Eğer REHBER_LISTESİ[j].isim, REHBER_LISTESİ[j + 1].isim’den alfabetik olarak sonra geliyorsa:
+            Bu iki ismin yerini değiştir.
+        Aksi halde:
+            Hiçbir şey yapma.
+        j = j + 1
+    i = i + 1
 
-    Ekrana "Sıralama tamamlandı!" yaz.
-    Ekrana "Alfabetik olarak düzenlenmiş rehber:" yaz.
+Ekrana "Sıralama tamamlandı!" yaz.
+Ekrana "Alfabetik olarak düzenlenmiş telefon rehberi:" yaz.
 
-    Her kişi için REHBER_LISTESİ'nde:
-        Ekrana kişi.isim + " - " + kişi.numara yaz.
+Her kişi için REHBER_LISTESİ’nde:
+    Ekrana kişi.isim + " - " + kişi.numara yaz.
+
+Ekrana "İşlem başarıyla tamamlandı." yaz.
 
 BİTİR
+
 
 
