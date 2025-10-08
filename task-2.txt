@@ -1,4 +1,60 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541076
+AD-SOYAD:sabiha nur çay
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+benim seçtiğim görev Basit kart oyunu stratejisi bu ödevi yaparken ChatGPT kullandım.
+basit kart oyunu stratejisi algoritmasında bana pseudecode yaz detaylı tekrar eden işlemleri içersin.
+ChatGPTnin cevabı
+BAŞLA
+
+Kart destesini karıştır.
+Oyuncuya 5 kart dağıt.
+Bilgisayara 5 kart dağıt.
+
+Oyuncu_puan = 0
+Bilgisayar_puan = 0
+Tur_sayısı = 1
+
+OYUN_DEVAM_EDERKEN (Tur_sayısı <= 5):
+    Ekrana "Tur " + Tur_sayısı + " başlıyor." yaz.
+    
+    Oyuncuya kartlarını göster.
+    Oyuncudan bir kart seçmesini iste.
+    Seçilen_kart = oyuncunun seçtiği kart
+
+    Bilgisayar_rastgele_kart_seç()
+    Bilgisayar_kart = rastgele seçilen kart
+
+    Ekrana "Bilgisayar şu kartı oynadı: " + Bilgisayar_kart yaz.
+
+    Eğer Seçilen_kart > Bilgisayar_kart ise:
+        Oyuncu_puan = Oyuncu_puan + 1
+        Ekrana "Bu turu kazandın!" yaz.
+    Değilse eğer Seçilen_kart < Bilgisayar_kart ise:
+        Bilgisayar_puan = Bilgisayar_puan + 1
+        Ekrana "Bu turu bilgisayar kazandı!" yaz.
+    Aksi halde:
+        Ekrana "Berabere!" yaz.
+
+    Seçilen_kart ve Bilgisayar_kart destesinden çıkar.
+    Tur_sayısı = Tur_sayısı + 1
+
+    Ekrana "Güncel skor: Oyuncu " + Oyuncu_puan + 
+            " - Bilgisayar " + Bilgisayar_puan yaz.
+    
+    Eğer kalan kart varsa:
+        Oyuna devam et.
+    Değilse:
+        OYUNU_BITİR()
+
+OYUNU_BITİR:
+    Ekrana "Oyun bitti!" yaz.
+    Eğer Oyuncu_puan > Bilgisayar_puan ise:
+        Ekrana "Tebrikler, kazandın!" yaz.
+    Değilse eğer Oyuncu_puan < Bilgisayar_puan ise:
+        Ekrana "Bilgisayar kazandı." yaz.
+    Aksi halde:
+        Ekrana "Oyun berabere!" yaz.
+
+BİTİR
+
