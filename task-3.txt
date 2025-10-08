@@ -1,4 +1,41 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541076
+AD-SOYAD:sabiha nur çay
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+benim seçtiğim görev telefon rehberini alfabetik düzenleme algoritması bu ödevi yaparken hatGPT kullandım.
+Telefon rehberini alfabetik düzenleme için bana koşul içeren bir algoritma yaz.
+ChatGPTnin cevabı
+BAŞLA
+
+Rehberdeki tüm kişi kayıtlarını bir listeye al → REHBER_LISTESİ
+
+Eğer REHBER_LISTESİ boşsa:
+    Ekrana "Rehberde kişi yok." yaz.
+    BİTİR
+
+Aksi halde:
+    N = REHBER_LISTESİ'ndeki kişi sayısı
+    Ekrana "Alfabetik sıralama başlatılıyor..." yaz.
+
+    i = 0
+    TEKRAR i < N - 1 OLDUĞU SÜRECE:
+        j = 0
+        TEKRAR j < N - i - 1 OLDUĞU SÜRECE:
+            Eğer REHBER_LISTESİ[j].isim > REHBER_LISTESİ[j + 1].isim ise:
+                Geçici = REHBER_LISTESİ[j]
+                REHBER_LISTESİ[j] = REHBER_LISTESİ[j + 1]
+                REHBER_LISTESİ[j + 1] = Geçici
+            Aksi halde:
+                Hiçbir işlem yapma.
+            j = j + 1
+        i = i + 1
+
+    Ekrana "Sıralama tamamlandı!" yaz.
+    Ekrana "Alfabetik olarak düzenlenmiş rehber:" yaz.
+
+    Her kişi için REHBER_LISTESİ'nde:
+        Ekrana kişi.isim + " - " + kişi.numara yaz.
+
+BİTİR
+
+
