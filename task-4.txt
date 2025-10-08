@@ -1,4 +1,56 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No:250541076
+AD-SOYAD:sabiha nur çay
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+benim seçtiğim görev Renkleri karıştırarak hedef rengi elde etme oldu bu ödevi yaparken ChatGPT kullandım.
+Renkleri karıştırarak hedef rengi elde etme algoritması için bana pseudecode yaz koşullu surumlar içersin doğal ifadelerle yaz.
+ChatGPTnin cevabı
+BAŞLA
+
+Ekrana "Hedef rengi gir (örneğin: mor, turuncu, yeşil):" yaz.
+Hedef_renk = kullanıcının girdiği değer
+
+Ana_renkler = ["kırmızı", "mavi", "sarı"]
+
+Eğer Hedef_renk ana_renklerden biriyse:
+    Ekrana "Bu zaten bir ana renk. Karıştırmaya gerek yok." yaz.
+    BİTİR
+
+Aksi halde:
+    Ekrana "Renk karıştırma işlemi başlatılıyor..." yaz.
+
+    Renk1 = ""
+    Renk2 = ""
+
+    Eğer Hedef_renk == "mor" ise:
+        Renk1 = "kırmızı"
+        Renk2 = "mavi"
+    Eğer Hedef_renk == "turuncu" ise:
+        Renk1 = "kırmızı"
+        Renk2 = "sarı"
+    Eğer Hedef_renk == "yeşil" ise:
+        Renk1 = "mavi"
+        Renk2 = "sarı"
+    Aksi halde:
+        Ekrana "Bu hedef renk tanımlı değil. Özel karışım yapılacak." yaz.
+        Renk1 = kullanıcıdan ilk rengi iste
+        Renk2 = kullanıcıdan ikinci rengi iste
+
+    Ekrana Renk1 + " ve " + Renk2 + " karıştırılıyor..." yaz.
+
+    Karışım_oranı = 0.5  // iki renk eşit oranda karıştırılır
+
+    TEKRAR Karışım_oranı <= 1.0 OLDUĞU SÜRECE:
+        Yeni_renk = Renk1 ve Renk2’nin tonlarına göre hesapla
+        Eğer Yeni_renk == Hedef_renk ise:
+            Ekrana "Hedef renk başarıyla elde edildi!" yaz.
+            DÖNGÜYÜ SONLANDIR
+        Aksi halde:
+            Karışım_oranı = Karışım_oranı + 0.1
+            Ekrana "Renk tonu ayarlanıyor..." yaz.
+
+    Eğer Yeni_renk != Hedef_renk ise:
+        Ekrana "Tam olarak hedef renge ulaşılamadı, yakın bir ton elde edildi." yaz.
+
+BİTİR
+
